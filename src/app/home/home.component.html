@@ -1,0 +1,14 @@
+<p>Bienvenue sur la page Home</p>
+<p>bonjour, je m'appelle {{ monNom }}</p>
+<!-- Binding(liaison) one-way : Lecture de valeur se trouvant dans le fichier TS -->
+
+<button (click)="changerNom('gilbert')" disabled>Click ici</button>
+
+<!-- Event Binding (liaison d'evenement) : lier l'execution d'une méthode
+     du fichier .ts à un evenement javascript -->
+
+
+<input type="text" [(ngModel)]="monNom">
+
+<!-- Binding Two-Ways : Liaison permettant la lecture et l'écriture d'une variable/prorpiété -->
+

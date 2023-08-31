@@ -1,0 +1,8 @@
+<h2>Chronomètre</h2>
+<p>{{totalSeconds | convertTime}}</p>
+<div class="chapter">
+    <!-- <button (click)="start()" [disabled]="isActive">Start</button>
+    <button (click)="pause()" [disabled]="!isActive">Pause</button> -->
+    <button (click)="toggle()">Start/Stop</button>
+    <button (click)="reset()" [disabled]="timer || totalSeconds == 0">Reset</button>
+</div>

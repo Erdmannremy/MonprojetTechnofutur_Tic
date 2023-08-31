@@ -8,18 +8,18 @@ import { article } from 'src/app/shared/Models/article';
 })
 export class ArticleListeDirectiveComponent {
 
-  article : article = {
-    titre :'Article 1',
-    description :'Description de l\'article 1',
-    estPublie : true
-  }
-  article2 : article = {
-    titre :'Article 2',
-    description :'Description de l\'article 2',
-    estPublie : false
-  }
-
-  articles : article[] = [this.article, this.article2];
+  articles : article[] = [
+    {
+      titre : 'Article',
+      description : 'Article',
+      estPublie : true
+    },
+    {
+      titre : 'Article2',
+      description : 'Article2',
+      estPublie : false
+    }
+  ]
 
   afficherTous = true;
 

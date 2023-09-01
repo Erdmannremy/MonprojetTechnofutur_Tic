@@ -1,0 +1,9 @@
+<h2>Liste de personne</h2>
+  <app-child
+      *ngFor="let person of listPerson"
+      [id]="person.id"
+      [prenom]="person.prenom"
+      (clickOnChildDelete)="deleteChildById($event)"
+      (clickOnChildUpdatePrenom)="updateChildPrenom($event)"
+  >
+  </app-child>

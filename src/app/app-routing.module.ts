@@ -8,6 +8,7 @@ import { Exercice2Component } from './exercices/exercice2/exercice2.component';
 import { DemoDirectiveComponent } from './demo/demo-directive/demo-directive.component';
 import { ArticleListeDirectiveComponent } from './exercices/article-liste-directive/article-liste-directive.component';
 import { ParentComponentComponent } from './demo/demoInputOutput/parent-component/parent-component.component';
+import { ParentComponent } from './demo/demoInputOutput/v-2/parent/parent.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'demo2', component: Demo2Component },
   { path: 'demo-directive', component: DemoDirectiveComponent },
   { path: 'demo-input-output', component: ParentComponentComponent },
+  { path: 'demo-input-output-V-2', component: ParentComponent },
   { path: 'exercice1', component: Exercice1Component },
   { path: 'exercice2', component: Exercice2Component },
   { path: 'article-liste-directive', component: ArticleListeDirectiveComponent }

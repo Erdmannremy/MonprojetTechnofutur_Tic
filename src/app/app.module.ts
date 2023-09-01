@@ -15,6 +15,8 @@ import { DemoDirectiveComponent } from './demo/demo-directive/demo-directive.com
 import { ArticleListeDirectiveComponent } from './exercices/article-liste-directive/article-liste-directive.component';
 import { ChildComponentComponent } from './demo/demoInputOutput/child-component/child-component.component';
 import { ParentComponentComponent } from './demo/demoInputOutput/parent-component/parent-component.component';
+import { ChildComponent } from './demo/demoInputOutput/v-2/child/child.component';
+import { ParentComponent } from './demo/demoInputOutput/v-2/parent/parent.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { ParentComponentComponent } from './demo/demoInputOutput/parent-componen
     DemoDirectiveComponent,
     ArticleListeDirectiveComponent,
     ChildComponentComponent,
-    ParentComponentComponent
+    ParentComponentComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,

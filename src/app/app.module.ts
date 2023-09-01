@@ -13,6 +13,8 @@ import { SharedModule } from './shared/shared.module';
 import { Exercice2Component } from './exercices/exercice2/exercice2.component';
 import { DemoDirectiveComponent } from './demo/demo-directive/demo-directive.component';
 import { ArticleListeDirectiveComponent } from './exercices/article-liste-directive/article-liste-directive.component';
+import { ChildComponentComponent } from './demo/demoInputOutput/child-component/child-component.component';
+import { ParentComponentComponent } from './demo/demoInputOutput/parent-component/parent-component.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ArticleListeDirectiveComponent } from './exercices/article-liste-direct
     Demo2Component,
     Exercice2Component,
     DemoDirectiveComponent,
-    ArticleListeDirectiveComponent
+    ArticleListeDirectiveComponent,
+    ChildComponentComponent,
+    ParentComponentComponent
   ],
   imports: [
     BrowserModule,

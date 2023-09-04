@@ -11,6 +11,8 @@ export class ExoBouttonClickComponent {
   handleButtonClick() : void {
     // 2mettre un évenement lorque le button est cliqué
     this.buttonClicked.emit();
-    
+
   }
+
+  constructor() {}
 }

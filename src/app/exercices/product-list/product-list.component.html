@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let product of productService.getProduits()">
+    {{product.nom}} {{product.prix}}
+    <button (click)="deleteProduct(product.id)">Supprimer</button>
+    <button (click)="editProduct(product)">Éditer</button>
+  </li>
+</ul>

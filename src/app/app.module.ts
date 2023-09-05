@@ -20,6 +20,7 @@ import { ParentComponent } from './demo/demoInputOutput/v-2/parent/parent.compon
 import { ExoBouttonClickComponent } from './exercices/exo-boutton-click/exo-boutton-click.component';
 import { ExoBouttonClickParentComponent } from './exercices/exo-boutton-click-parent/exo-boutton-click-parent.component';
 import { DemoServiceComponent } from './demo/demo-service/demo-service.component';
+import { ProductListComponent } from './exercices/product-list/product-list.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { DemoServiceComponent } from './demo/demo-service/demo-service.component
     ParentComponent,
     ExoBouttonClickComponent,
     ExoBouttonClickParentComponent,
-    DemoServiceComponent
+    DemoServiceComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

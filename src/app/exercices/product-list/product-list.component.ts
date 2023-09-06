@@ -13,6 +13,13 @@ export class ProductListComponent {
   newProductDescription : string = '';
   newProductPrice : number = 0;
 
+  updatedNewProductName : string = '';
+  updatedNewProductDescription : string = '';
+  updatedNewProductPrice : number = 0;
+  selectProductId : number | null = null;
+
+  showUpdateForm : boolean = false;
+
   constructor(public productService : ProductServiceService){}
 
   deleteProduct(id : number) : void {
@@ -20,14 +27,53 @@ export class ProductListComponent {
   }
 
   addProduct(){
-    // const newProduct : Product = {
-    //   id :
-    // }
+    const newProduct : Product = {
+      id : this.getNextProductId(),
+      nom : this.newProductName,
+      description : this.newProductDescription,
+      prix : this.newProductPrice,
+    }
+
+    this.productService.ajoutProduit(newProduct);
+    this.resetForm();
   }
 
-  editProduct(product : Product) : void {
-
+  resetForm() : void {
+    this.newProductName= '';
+    this.newProductDescription= '';
+    this.newProductPrice= 0;
   }
 
-  // get Id
+  resetUpdateForm() : void {
+    this.updatedNewProductName= '';
+    this.updatedNewProductDescription= '';
+    this.updatedNewProductPrice= 0;
+  }
+
+  editProduct(updatedProduct : Product) : void {
+    this.selectProductId = updatedProduct.id
+    this.updatedNewProductName = updatedProduct.nom
+    this.updatedNewProductDescription = updatedProduct.description
+    this.updatedNewProductPrice = updatedProduct.prix
+  }
+
+  // update
+  updateProduct() : void {
+    if (this.selectProductId !== null) {
+      const updatedProduct : Product = {
+        id : this.selectProductId,
+        nom : this.updatedNewProductName,
+        description : this.updatedNewProductDescription,
+        prix : this.updatedNewProductPrice
+      }
+
+      this.productService.updateProduit(updatedProduct);
+    }
+  }
+  // get NextId
+  private getNextProductId() : number{
+    // Calculer l'i suivant en se basant sur le tableaux existant
+    const ids = this.productService.getProduits().map((product) => product.id)
+    return Math.max(0, ...ids) +1;
+  }
 }

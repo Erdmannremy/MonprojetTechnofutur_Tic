@@ -23,6 +23,9 @@ export class ProductServiceService {
   // U => Update
   updateProduit(updatedProduit : Product){
     const index = this._products.findIndex((product) => product.id === updatedProduit.id)
+    if (index >= 0) {
+      this._products[index] = updatedProduit;
+    }
   }
 
   // D => Delete
@@ -32,5 +35,4 @@ export class ProductServiceService {
       this._products.splice(index, 1)
     }
   }
-
 }
